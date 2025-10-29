@@ -64,15 +64,15 @@ class WidgetSettingsActivity : AppCompatActivity() {
 
         btnSave.setOnClickListener {
             prefs.clearForWidget(this, appWidgetId)
-            prefs.setString(this, "baseUrl_${appWidgetId}", baseUrlField.text.toString().trim())
-            prefs.setString(this, "login_${appWidgetId}", loginField.text.toString().trim())
-            prefs.setString(this, "password_${appWidgetId}", passwordField.text.toString())
-            prefs.setString(this, "tag1_${appWidgetId}", tag1Field.text.toString().trim())
-            prefs.setString(this, "tag2_${appWidgetId}", tag2Field.text.toString().trim())
-            prefs.setString(this, "tag3_${appWidgetId}", tag3Field.text.toString().trim())
-            prefs.setInt(this, "transparency_${appWidgetId}", transparencySeek.progress)
-            prefs.setInt(this, "textSize_${appWidgetId}", textSizeSeek.progress)
-            prefs.apply(this)
+            PrefsHelper.putString(this, "baseUrl_$appWidgetId", baseUrlField.text.toString().trim())
+            PrefsHelper.putString(this, "login_$appWidgetId", loginField.text.toString().trim())
+            PrefsHelper.putString(this, "password_$appWidgetId", passwordField.text.toString())
+            PrefsHelper.putString(this, "tag1_$appWidgetId", tag1Field.text.toString().trim())
+            PrefsHelper.putString(this, "tag2_$appWidgetId", tag2Field.text.toString().trim())
+            PrefsHelper.putString(this, "tag3_$appWidgetId", tag3Field.text.toString().trim())
+            PrefsHelper.putInt(this, "transparency_$appWidgetId", transparencySeek.progress)
+            PrefsHelper.putInt(this, "textSize_$appWidgetId", textSizeSeek.progress)
+
 
             val result = Intent().apply {
                 putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
