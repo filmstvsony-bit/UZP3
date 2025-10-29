@@ -1,5 +1,3 @@
-
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -7,19 +5,22 @@
 
     <application
         android:allowBackup="true"
-        android:label="УЗП"
-        android:icon="@mipmap/ic_launcher"
+        android:label="УЗП Виджет"
+        android:icon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
-        <activity
-            android:name=".MainActivity"
+        <receiver
+            android:name=".MySimpLightWidget"
+            android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
-        </activity>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/simplight_widget_info" />
+        </receiver>
 
         <activity
             android:name=".WidgetSettingsActivity"
@@ -28,19 +29,6 @@
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
-
-        <receiver
-            android:name=".MySimpLightWidget"
-            android:enabled="true"
-            android:exported="true"
-            android:label="УЗП">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/simplight_widget_info" />
-        </receiver>
 
         <receiver
             android:name=".BootReceiver"
@@ -52,4 +40,5 @@
         </receiver>
 
     </application>
+
 </manifest>
