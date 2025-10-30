@@ -64,4 +64,4 @@ jobs:
           prerelease: false
           files: UZPWidget_Release.apk
         env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.RUSLIK334 }}
