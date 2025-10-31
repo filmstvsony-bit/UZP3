@@ -10,17 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
-        <receiver
-            android:name=".MySimpLightWidget"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/simplight_widget_info" />
-        </receiver>
+    <receiver
+        android:name=".MySimpLightWidget"
+        android:label="@string/app_name"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+        </intent-filter>
+
+        <meta-data
+            android:name="android.appwidget.provider"
+            android:resource="@xml/simplight_widget_info" />
+    </receiver>
+
 
         <receiver
             android:name=".BootReceiver"
