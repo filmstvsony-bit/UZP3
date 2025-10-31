@@ -6,7 +6,6 @@
     android:initialLayout="@layout/widget_simplight_single_column"
     android:configure="ru.simplight.uzpwidget.WidgetSettingsActivity"
     android:resizeMode="horizontal|vertical"
-    android:widgetCategory="home_screen"
-    android:previewImage="@drawable/ic_widget_preview" />
+    android:widgetCategory="home_screen"/>
 
 
