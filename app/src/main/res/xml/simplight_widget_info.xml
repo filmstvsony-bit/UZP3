@@ -6,6 +6,7 @@
     android:initialLayout="@layout/widget_simplight_single_column"
     android:configure="ru.simplight.uzpwidget.WidgetSettingsActivity"
     android:resizeMode="horizontal|vertical"
-    <!--android:widgetCategory="home_screen"-->
-    android:label="УЗП"
+        android:label="УЗП"
     android:previewImage="@mipmap/ic_launcher"/>
+    <!-- android:widgetCategory="home_screen" -->
+
