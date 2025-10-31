@@ -2,7 +2,7 @@
     android:id="@+id/widgetRoot"
     android:orientation="vertical"
     android:padding="8dp"
-    android:background="@drawable/ic_launcher_gear"
+    android:background="@drawable/widget_background"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
