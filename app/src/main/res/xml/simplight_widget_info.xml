@@ -1,12 +1,11 @@
 <!--<?xml version="1.0" encoding="utf-8"?>-->
 <AppWidgetProviderInfo xmlns:android="http://schemas.android.com/apk/res/android"
-    android:minWidth="140dp"
-    android:minHeight="72dp"
+    android:minWidth="120dp"
+    android:minHeight="60dp"
     android:updatePeriodMillis="0"
     android:initialLayout="@layout/widget_simplight_single_column"
     android:configure="ru.simplight.uzpwidget.WidgetSettingsActivity"
     android:resizeMode="horizontal|vertical"
-        android:label="УЗП"
-    android:previewImage="@mipmap/ic_launcher"/>
-    <!-- android:widgetCategory="home_screen" -->
+    android:widgetCategory="home_screen" />
+
 
